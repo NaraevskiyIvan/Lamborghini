@@ -41,6 +41,14 @@ a {
   margin: 0 auto;
 }
 
+.menu-mobile {
+  display: none;
+}
+
+.menu-btn {
+  display: none;
+}
+
 /* -----------Header-------- */
 .header {
   padding-top: 25px;
@@ -509,7 +517,6 @@ a {
   display: flex;
   justify-content: space-between;
   gap: 0 20px;
-
 }
 
 .footer__info-item {
@@ -529,7 +536,7 @@ a {
 }
 
 .footer__info-item a {
-  transition: color .2s ease-in;
+  transition: color 0.2s ease-in;
 }
 
 .footer__info-item a:hover {
@@ -573,14 +580,270 @@ a {
 }
 
 .footer__bottom-link {
-  transition: color .2s ease-in;
+  transition: color 0.2s ease-in;
 }
 
 .footer__bottom-link:hover {
-color: var(--color-light-gold);
-}  
+  color: var(--color-light-gold);
+}
 
 .footer__logo-img {
   width: 45px;
-  height: 53px;
+  /* height: 53px; */
+}
+
+/* _____Media_____ */
+@media (max-width: 1100px) {
+  .promo {
+    background-position: left center;
+  }
+
+  .menu-list {
+    display: none;
+  }
+
+  .menu-mobile {
+    display: flex;
+
+    gap: 0 20px;
+  }
+
+  .logo {
+    width: 50px;
+  }
+
+  .nav {
+    align-items: center;
+  }
+
+  .title {
+    font-size: 64px;
+  }
+
+  .subtitle {
+    font-size: 42px;
+  }
+
+  .subtitle span {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 969px) {
+  .evo-white__wrapper::after {
+    display: none;
+  }
+}
+
+@media (max-width: 850px) {
+  .menu-btn {
+    width: 30px;
+    height: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    z-index: 9;
+  }
+
+  .menu-btn span {
+    height: 3px;
+    width: 100%;
+    background-color: var(--color-gold);
+  }
+
+  .menu-mobile {
+    display: none;
+    /* transform: translateY(-100vh);
+    transition: all .2s ease-in; */
+  }
+
+  .menu-mobile.menu--open {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--color-black);
+    height: 100vh;
+    z-index: 3;
+    padding-top: 100px;
+    /* transform: translateY(0); */
+  }
+
+  .menu-link {
+    display: block;
+    color: var(--color-gold);
+    font-size: 4vh;
+    padding: 20px 0;
+  }
+
+  /* ----Info--- */
+  .info__part-textbox {
+    display: block;
+    padding-bottom: 15px;
+  }
+
+  .info__part {
+    display: block;
+    text-align: center;
+  }
+
+  .info__part--second .info__text,
+  .info__part--third .info__text {
+    max-width: 100%;
+  }
+
+  .info__part-img {
+    margin: 0 auto;
+  }
+
+  .info__table {
+    width: 100%;
+  }
+
+  .info__table::before {
+    left: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .blog__slider {
+    padding-bottom: 50px;
+  }
+
+  .blog__quote {
+    flex-direction: column;
+  }
+
+  .blog__quote-box {
+    flex-basis: auto;
+  }
+
+  .blog__quote-img {
+    order: -1;
+  }
+
+  .blog__item-img {
+    width: 100%;
+  }
+
+  .footer {
+    padding-top: 50px;
+  }
+
+  .footer__top {
+    display: block;
+  }
+
+  .footer__bottom {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 669px) {
+  .evo-white__wrapper::before {
+    display: none;
+  }
+
+  .evo__descr-list {
+    display: block;
+    text-align: center;
+  }
+
+  .evo__descr-list div:not(:last-child) {
+    margin-bottom: 15px;
+  }
+
+  .evo-black__info {
+    display: block;
+  }
+
+  .evo-black__title {
+    margin-bottom: 20px;
+  }
+
+  .evo-black__wrapper::after {
+    display: none;
+  }
+}
+
+@media (max-width: 560px) {
+  .menu-mobile.menu--open {
+    padding-top: 50px;
+  }
+
+  .title {
+    font-size: 42px;
+  }
+
+  .subtitle {
+    font-size: 30px;
+  }
+
+  .subtitle span {
+    font-size: 26px;
+  }
+
+  .info {
+    margin-bottom: 50px;
+  }
+
+  .info__part {
+    padding-top: 50px;
+  }
+
+  .info__title {
+    font-size: 28px;
+  }
+
+  .track__title {
+    font-size: 28px;
+  }
+
+  .evo {
+    margin-bottom: 50px;
+  }
+
+  .evo-black {
+    padding-top: 50px;
+  }
+
+  .evo-black__img {
+    margin-top: 80px;
+  }
+
+.evo-white__wrapper {
+  padding-top: 50px;
+}
+
+  .evo-white__video {
+    margin: 30px 0;
+  }
+
+  .evo-black__title {
+    font-size: 28px;
+  }
+
+.blog {
+  margin-bottom: 20px;
+}
+
+  .blog__title {
+    font-size: 28px;
+  }
+
+  .footer__title {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 340px) {
+  .promo {
+    background-position: center;
+  }
 }
